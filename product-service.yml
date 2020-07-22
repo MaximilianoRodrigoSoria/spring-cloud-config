@@ -21,7 +21,7 @@ server:
 spring:
   profiles: hml
   application:
-    name: product-service-dsv
+    name: product-service-hml
 
 server:
   port: 7001  #${PORT:0}
@@ -30,7 +30,7 @@ server:
 spring:
   profiles: prd
   application:
-    name: product-service-prod
+    name: product-service-prd
 
 server:
   port: 6001  #${PORT:0}
