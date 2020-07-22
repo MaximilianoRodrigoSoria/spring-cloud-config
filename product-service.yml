@@ -6,6 +6,8 @@ eureka:
     instance-id:  ${spring.application.name}:${eureka.instance.instance_id:${random.value}}
     status-page-url-path: /swagger-ui.html
 
+server:
+  port: 9292
 ---
 spring:
   profiles: dsv
