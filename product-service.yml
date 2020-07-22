@@ -32,7 +32,7 @@ server:
 
 echo:
   test:
-    message: profile HML found successfully!!!!!! Test Refresh
+    message: profile HML found successfully!!!!!! Test Refresh 2
 ---
 spring:
   profiles: prd
