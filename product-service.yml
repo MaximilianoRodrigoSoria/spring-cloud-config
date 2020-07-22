@@ -16,7 +16,7 @@ spring:
 
 echo:
   test:
-    message: profile DSV found successfully!!!!!!
+    message: profile DSV found successfully!!! Test Refresh 2
 
 server:
   port: 8001  #${PORT:0}
@@ -36,7 +36,7 @@ server:
 
 echo:
   test:
-    message: profile HML found successfully!!!!!! Test Refresh 2
+    message: profile HML found successfully!!!
 ---
 spring:
   profiles: prd
