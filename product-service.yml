@@ -16,7 +16,7 @@ spring:
 
 echo:
   test:
-    message: profile DSV found successfully!!! Test Refresh 2
+    message: profile DSV found successfully!!!
 
 server:
   port: 8001  #${PORT:0}
