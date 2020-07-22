@@ -21,6 +21,10 @@ echo:
 server:
   port: 8001  #${PORT:0}
 
+springdoc:
+  show:
+    actuator: true
+
 ---
 spring:
   profiles: hml
