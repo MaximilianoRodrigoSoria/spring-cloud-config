@@ -14,6 +14,10 @@ spring:
   application:
     name: product-service-dsv
 
+echo:
+  test:
+    message: profile DSV found successfully!!!!!!
+
 server:
   port: 8001  #${PORT:0}
 
@@ -26,12 +30,19 @@ spring:
 server:
   port: 7001  #${PORT:0}
 
+echo:
+  test:
+    message: profile HML found successfully!!!!!!
 ---
 spring:
   profiles: prd
   application:
     name: product-service-prd
 
+echo:
+  test:
+    message: profile PRD found successfully!!!!!!
+    
 server:
   port: 6001  #${PORT:0}
 
