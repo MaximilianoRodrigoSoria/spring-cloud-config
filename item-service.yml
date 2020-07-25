@@ -1,0 +1,62 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+  instance:
+    instance-id:  ${spring.application.name}:${eureka.instance.instance_id:${random.value}}
+    status-page-url-path: /swagger-ui.html
+
+server:
+  port: 8002
+---
+spring:
+  profiles: dsv
+  application:
+    name: item-service-dsv
+
+echo:
+  test:
+    message: profile DSV found successfully!!!
+
+server:
+  port: 8002  #${PORT:0}
+
+springdoc:
+  show:
+    actuator: true
+
+---
+spring:
+  profiles: hml
+  application:
+    name: item-service-hml
+
+server:
+  port: 7002  #${PORT:0}
+
+echo:
+  test:
+    message: profile HML found successfully!!!
+---
+spring:
+  profiles: prd
+  application:
+    name: item-service-prd
+
+echo:
+  test:
+    message: profile PRD found successfully!!!!!!
+
+server:
+  port: 6002  #${PORT:0}
+
+
+
+#hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 20000
+#ribbon.ConnectionTimeOut: 3000
+#ribbon.ReadTimeOut: 6000
+#springdoc.swagger-ui.path=/item-swagger.html
+#server.port=8001
+#${PORT:0}
+#eureka.client.service-url.defaultZone=http://localhost:8761/eureka
+#eureka.instance.instance-id=${spring.application.name}:${eureka.instance.instance_id:${random.value}}
