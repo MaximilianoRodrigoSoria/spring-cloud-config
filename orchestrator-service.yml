@@ -1,0 +1,62 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+  instance:
+    instance-id:  ${spring.application.name}:${eureka.instance.instance_id:${random.value}}
+    status-page-url-path: /graphiql
+
+server:
+  port: 8007
+---
+spring:
+  profiles: dsv
+  application:
+    name: orchestrator-service-dsv
+
+echo:
+  test:
+    message: profile DSV found successfully!!!
+
+server:
+  port: 8001  #${PORT:0}
+
+springdoc:
+  show:
+    actuator: true
+
+---
+spring:
+  profiles: hml
+  application:
+    name: orchestrator-service-hml
+
+server:
+  port: 7001  #${PORT:0}
+
+echo:
+  test:
+    message: profile HML found successfully!!!
+---
+spring:
+  profiles: prd
+  application:
+    name: orchestrator-service-prd
+
+echo:
+  test:
+    message: profile PRD found successfully!!!!!!
+
+server:
+  port: 6001  #${PORT:0}
+
+
+
+#hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 20000
+#ribbon.ConnectionTimeOut: 3000
+#ribbon.ReadTimeOut: 6000
+#springdoc.swagger-ui.path=/orchestrator-swagger.html
+#server.port=8001
+#${PORT:0}
+#eureka.client.service-url.defaultZone=http://localhost:8761/eureka
+#eureka.instance.instance-id=${spring.application.name}:${eureka.instance.instance_id:${random.value}}
