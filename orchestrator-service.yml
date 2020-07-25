@@ -19,7 +19,7 @@ echo:
     message: profile DSV found successfully!!!
 
 server:
-  port: 8001  #${PORT:0}
+  port: 8007  #${PORT:0}
 
 springdoc:
   show:
@@ -32,7 +32,7 @@ spring:
     name: orchestrator-service-hml
 
 server:
-  port: 7001  #${PORT:0}
+  port: 7007  #${PORT:0}
 
 echo:
   test:
@@ -48,7 +48,7 @@ echo:
     message: profile PRD found successfully!!!!!!
 
 server:
-  port: 6001  #${PORT:0}
+  port: 6007  #${PORT:0}
 
 
 
