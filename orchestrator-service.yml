@@ -14,6 +14,10 @@ spring:
   application:
     name: orchestrator-service-dsv
 
+feing:
+  client:
+    product:
+      target: product-service-dsv
 echo:
   test:
     message: profile DSV found successfully!!!
@@ -34,6 +38,11 @@ spring:
 server:
   port: 7007  #${PORT:0}
 
+feing:
+  client:
+    product:
+      target: product-service-hml
+
 echo:
   test:
     message: profile HML found successfully!!!
@@ -43,6 +52,10 @@ spring:
   application:
     name: orchestrator-service-prd
 
+feing:
+  client:
+    product:
+      target: product-service-prd
 echo:
   test:
     message: profile PRD found successfully!!!!!!
