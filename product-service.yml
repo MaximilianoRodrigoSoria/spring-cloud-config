@@ -25,7 +25,7 @@ spring:
 
 echo:
   test:
-    message: profile DSV found successfully!!!
+    message: profile DSV found successfully!!! dwerwerwerwwer
 
 server:
   port: 8001  #${PORT:0}
